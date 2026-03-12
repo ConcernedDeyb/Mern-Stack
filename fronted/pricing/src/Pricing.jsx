@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-// ─── Matrix Rain Background ───────────────────────────────────────────────────
+
 function MatrixBackground() {
   const canvasRef = useRef(null);
 
@@ -62,7 +62,7 @@ function MatrixBackground() {
   );
 }
 
-// ─── Navbar ───────────────────────────────────────────────────────────────────
+
 function Navbar() {
   return (
     <nav style={styles.nav}>
@@ -92,7 +92,7 @@ function Navbar() {
   );
 }
 
-// ─── Plan Card ────────────────────────────────────────────────────────────────
+
 const PLANS = [
   {
     tier: "Starter",
@@ -183,14 +183,14 @@ function PricingCard({ plan, billing, index }) {
           : "rgba(255,255,255,0.07)",
       }}
     >
-      {/* Badge */}
+      
       {plan.badge && (
         <div style={{ ...styles.badge, background: plan.color }}>
           {plan.badge}
         </div>
       )}
 
-      {/* Icon & Tier */}
+     
       <div style={styles.cardHeader}>
         <div
           style={{
@@ -206,7 +206,7 @@ function PricingCard({ plan, billing, index }) {
         <p style={styles.tierDesc}>{plan.description}</p>
       </div>
 
-      {/* Price */}
+     
       <div style={styles.priceRow}>
         <span style={styles.currency}>$</span>
         <span style={styles.priceAmount}>{price}</span>
@@ -218,12 +218,12 @@ function PricingCard({ plan, billing, index }) {
         </p>
       )}
 
-      {/* Divider */}
+     
       <div
         style={{ ...styles.divider, background: `${plan.color}33` }}
       />
 
-      {/* Features */}
+     
       <ul style={styles.featureList}>
         {plan.features.map((f) => (
           <li key={f} style={styles.featureItem}>
@@ -233,7 +233,7 @@ function PricingCard({ plan, billing, index }) {
         ))}
       </ul>
 
-      {/* CTA */}
+     
       <button
         style={{
           ...styles.ctaBtn,
@@ -251,7 +251,7 @@ function PricingCard({ plan, billing, index }) {
   );
 }
 
-// ─── FAQ Strip ────────────────────────────────────────────────────────────────
+
 const FAQS = [
   {
     q: "Can I switch plans later?",
@@ -309,7 +309,7 @@ function FAQ() {
   );
 }
 
-// ─── Main Pricing Page ────────────────────────────────────────────────────────
+
 export default function Pricing() {
   const [billing, setBilling] = useState("monthly");
 
@@ -319,7 +319,7 @@ export default function Pricing() {
       <Navbar />
 
       <main style={styles.main}>
-        {/* Hero */}
+        
         <section style={styles.hero}>
           <div style={styles.heroPill}>
             <span style={styles.pillDot} />
@@ -333,7 +333,7 @@ export default function Pricing() {
             neutralize threats in real time. Scale your protection as you grow.
           </p>
 
-          {/* Billing Toggle */}
+          
           <div style={styles.toggleWrapper}>
             <button
               style={{
@@ -380,7 +380,7 @@ export default function Pricing() {
           ))}
         </section>
 
-        {/* Trust Bar */}
+       
         <div style={styles.trustBar}>
           {[
             "🔐 SOC 2 Type II Certified",
@@ -398,7 +398,7 @@ export default function Pricing() {
         <FAQ />
       </main>
 
-      {/* Footer */}
+     
       <footer style={styles.footer}>
         <span style={styles.logo}>
           Cy<span style={styles.logoAccent}>F</span>ive
@@ -428,7 +428,7 @@ export default function Pricing() {
   );
 }
 
-// ─── Styles ───────────────────────────────────────────────────────────────────
+
 const styles = {
   root: {
     minHeight: "100vh",
@@ -439,7 +439,7 @@ const styles = {
     overflowX: "hidden",
   },
 
-  // ── Navbar
+  
   nav: {
     position: "relative",
     zIndex: 10,
@@ -482,7 +482,7 @@ const styles = {
     transition: "all 0.2s",
   },
 
-  // ── Main
+ 
   main: {
     position: "relative",
     zIndex: 1,
@@ -491,7 +491,7 @@ const styles = {
     padding: "0 24px 60px",
   },
 
-  // ── Hero
+  
   hero: {
     textAlign: "center",
     padding: "70px 0 40px",
@@ -542,7 +542,7 @@ const styles = {
     textShadow: "0 0 20px rgba(0,180,255,0.5)",
   },
 
-  // ── Toggle
+  
   toggleWrapper: {
     display: "inline-flex",
     gap: "6px",
@@ -719,7 +719,7 @@ const styles = {
     marginTop: "auto",
   },
 
-  // ── Trust Bar
+  
   trustBar: {
     display: "flex",
     flexWrap: "wrap",
@@ -738,7 +738,7 @@ const styles = {
     fontFamily: "sans-serif",
   },
 
-  // ── FAQ
+  
   faqSection: {
     maxWidth: "700px",
     margin: "20px auto 0",
@@ -790,7 +790,7 @@ const styles = {
     fontWeight: 400,
   },
 
-  // ── Footer
+  
   footer: {
     position: "relative",
     zIndex: 1,
